@@ -1,9 +1,14 @@
 Testapp::Application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  get "pages/index"
+  get "pages/about"
+  get "pages/contact"
+  get "pages/features"
+  get "pages/login"
+  get "pages/pricing"
+  get "pages/register"
+
+  root :to => 'pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -39,7 +44,7 @@ Testapp::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
